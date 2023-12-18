@@ -1,8 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+// components
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+
+//theme
+import { ThemeProvider } from '@/components/ThemeProvider'
+
+const inter = Inter({ subsets: ['latin'] });
+const poppins = Poppins({ subsets: ['latin'], weight: ['100', '200', '400', '700'] });
 
 export const metadata: Metadata = {
   title: 'Hi! This is George!',
@@ -15,8 +23,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-gray-300 text-slate-900 container mx-auto p-4`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${poppins.className} container mx-auto p-4`}>
+        <ThemeProvider attribute="class" defaultTheme='dark'>
+          <Navbar />
+          {children}        
+          <Footer />
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
