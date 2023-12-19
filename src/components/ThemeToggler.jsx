@@ -10,23 +10,22 @@ const ThemeToggler = () => {
 	const { theme, setTheme } = useTheme();
 
 	return (
-		<div>
-			<Button
-				onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-				className="bg-transparent text-4xl hover:bg-transparent text-gray-300"
-			>
-				<MdOutlineToggleOn
-					className={`fixed h-[1.2rem] w-[1.2rem] transition-all ${
-						theme === "dark" ? "hidden" : "block"
-					}`}
-				/>
-				<MdToggleOff
-					className={`h-[1.2rem] w-[1.2rem] transition-all ${
-						theme === "dark" ? "block" : "hidden"
-					} absolute`}
-				/>
-			</Button>
-		</div>
+		<Button
+			onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+			className="bg-transparent text-4xl hover:bg-transparent text-gray-300"
+			variant="outline"
+		>
+			<MdOutlineToggleOn
+				className={`fixed h-[1.2rem] w-[1.2rem] transition-all ${
+					theme === "dark" ? "hidden" : "block"
+				}`}
+			/>
+			<MdToggleOff
+				className={`h-[1.2rem] w-[1.2rem] transition-all ${
+					theme === "dark" ? "block" : "hidden"
+				} absolute`}
+			/>
+		</Button>
 	);
 };
 
