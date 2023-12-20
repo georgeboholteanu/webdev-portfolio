@@ -170,7 +170,7 @@ const Projects = () => {
 				</div>
 
 				{/* project cards */}
-				<div className="flex flex-row flex-wrap gap-6 w-full justify-between">
+				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-between">
 					{filteredProjects.map((project, index) => {
 						return (
 							<ProjectCard
@@ -179,6 +179,7 @@ const Projects = () => {
 								projectCategory={project.category}
 								projectDescription={project.description}
 								projectType={project.type}
+								projectLink={project.link}
 								projectGithub={project.github}
 								key={index}
 							/>
