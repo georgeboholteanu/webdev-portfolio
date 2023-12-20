@@ -8,7 +8,6 @@ import Logo from "./Logo";
 import Nav from "./Nav";
 import ThemeToggler from "./ThemeToggler";
 import MobileNav from "./MobileNav";
-import Socials from "./Socials";
 
 function Header() {
 	const pathname = usePathname();
@@ -29,8 +28,8 @@ function Header() {
 				header
 					? "py-4 bg-white shadow-lg dark:bg-accent"
 					: "py-6 dark:bg-transparent"
-			} sticky top-0 z-30 transition-all ${
-				pathname === "/" && "bg-[#8b8a89]"
+			} sticky top-0 z-30 transition-all border-b-2 border-secondary ${
+				pathname === "/contact" && "bg-[#898b8b]"
 			}`}
 		>
 			<div className="container mx-auto">
@@ -50,7 +49,7 @@ function Header() {
 					</div>
 				</div>
 			</div>
-			<div className="fixed bottom-10 left-10">
+			<div className="fixed bottom-20 left-10 text-4xl">
 				<ThemeToggler />
 			</div>
 		</header>

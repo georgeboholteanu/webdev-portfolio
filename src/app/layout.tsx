@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.className} container mx-auto p-4`}>
+      <body className={`${poppins.className}`}>
         <ThemeProvider attribute="class" defaultTheme='dark'>
           <Navbar />
           {children}        

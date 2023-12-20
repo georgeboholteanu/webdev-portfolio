@@ -70,8 +70,10 @@ module.exports = {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 			},
-			backgroundImage: {
-				hero: "url(/hero/gb_square.jpg)",
+			backgroundImage: {				
+				hero_shape: "url(/hero/mask_primary.svg)",
+				hero_shape_light: "url(/hero/mask1_light.svg)",
+				hero_shape_dark: "url(/hero/mask1_dark.svg)",
 			},
 		},
 	},

@@ -15,7 +15,7 @@ const Socials = ({ containerStyles, iconsStyles }) => {
 			{icons.map((icon, index) => {
 				return (
 					<Link href={icon.path} key={index}>
-						<div className="hover:text-primary ">{icon.name}</div>
+						<div className="hover:text-primary text-2xl">{icon.name}</div>
 					</Link>
 				);
 			})}

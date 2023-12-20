@@ -73,7 +73,4 @@
 		@apply cursor-pointer;
 	}
 
-	/* button {
-        @apply shadow-lg  rounded-xl uppercase bg-gradient-to-r from-[#4b9cac] to-[#1a3d88] text-white
-    } */
 }
