@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Logo = () => {
 	return (
-		<Link href="/">
+		<Link href="/" className="hover:scale-[1.1] transition-all">
 			<Image
 				src="/gb_logo.png"
 				alt="Logo"

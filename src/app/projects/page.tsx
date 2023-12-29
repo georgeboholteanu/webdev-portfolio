@@ -11,6 +11,8 @@ import { Pagination } from "swiper/modules";
 
 // components
 import ProjectCard from "@/components/ProjectCard";
+import PageWrapper from "@/components/PageWrapper";
+import { Badge } from "@/components/ui/badge";
 
 const projectData = [
 	{
@@ -143,51 +145,55 @@ const Projects = () => {
 	}, [activeCategory]);
 
 	return (
-		<section className="relative mx-4 mb-12 xl:mb-48 mt-24">
-			<div className="container mx-auto">
-				{/* text */}
-				<h2 className="section-title mb-4 text-blue-400 text-6xl">
-					Projects
-				</h2>
-				<p className="subtitle mb-16">
-					A collection of projects reflecting my overall experience
-				</p>
+		<PageWrapper>
+			<section className="relative mx-4 mb-12 xl:mb-48">
+				<div className="container mx-auto">
+					{/* text */}
+					<h1 className="mb-4 font-bold text-blue-400">projects</h1>
+					<p className="subtitle mb-10 sm:mb-16">
+						A collection of projects reflecting my overall
+						experience
+					</p>
 
-				{/* filter buttons */}
-				<div className="flex gap-x-4 mb-10">
-					<Button
-						className="w-24"
-						onClick={() => handleCategoryChange("all")}
-					>
-						All
-					</Button>
-					<Button onClick={() => handleCategoryChange("dev")}>
-						Development
-					</Button>
-					<Button onClick={() => handleCategoryChange("vis")}>
-						Visualization
-					</Button>
-				</div>
+					{/* filter buttons */}
+					<div className="flex gap-x-2 sm:gap-x-4 mb-10">
+						<button onClick={() => handleCategoryChange("all")}>
+							<Badge className="w-24 text-md justify-center font-normal">
+								All
+							</Badge>
+						</button>
+						<button onClick={() => handleCategoryChange("dev")}>
+							<Badge className="text-md justify-center font-normal">
+								Development
+							</Badge>
+						</button>
+						<button onClick={() => handleCategoryChange("vis")}>
+							<Badge className="text-md justify-center font-normal">
+								Visualization
+							</Badge>
+						</button>
+					</div>
 
-				{/* project cards */}
-				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-between">
-					{filteredProjects.map((project, index) => {
-						return (
-							<ProjectCard
-								projectImage={project.image}
-								projectName={project.name}
-								projectCategory={project.category}
-								projectDescription={project.description}
-								projectType={project.type}
-								projectLink={project.link}
-								projectGithub={project.github}
-								key={index}
-							/>
-						);
-					})}
+					{/* project cards */}
+					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-between">
+						{filteredProjects.map((project, index) => {
+							return (
+								<ProjectCard
+									projectImage={project.image}
+									projectName={project.name}
+									projectCategory={project.category}
+									projectDescription={project.description}
+									projectType={project.type}
+									projectLink={project.link}
+									projectGithub={project.github}
+									key={index}
+								/>
+							);
+						})}
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</PageWrapper>
 	);
 };
 

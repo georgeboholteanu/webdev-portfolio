@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 // components
@@ -28,7 +27,7 @@ function Header() {
 				header
 					? "py-4 bg-white shadow-lg dark:bg-accent"
 					: "py-6 dark:bg-transparent"
-			} sticky top-0 z-30 transition-all border-b-2 border-secondary ${
+			} sticky top-0 z-30 transition-all border-b-2 border-secondary mb-10 ${
 				pathname === "/contact" && "bg-[#898b8b]"
 			}`}
 		>
@@ -39,7 +38,7 @@ function Header() {
 						{/* nav */}
 						<Nav
 							containerStyles="hidden lg:flex gap-x-10 items-center px-20"
-							linkStyles="relative hover:text-primary transition-all"
+							linkStyles="relative hover:text-primary transition-all hover:scale-[1.1]"
 							underlineStyles="absolute left-0 top-full h-[2px] bg-primary w-full"
 						/>
 						{/* mobile nav */}
@@ -49,7 +48,7 @@ function Header() {
 					</div>
 				</div>
 			</div>
-			<div className="fixed bottom-20 left-10 text-4xl">
+			<div className="fixed bottom-10 left-10 text-4xl z-50">
 				<ThemeToggler />
 			</div>
 		</header>

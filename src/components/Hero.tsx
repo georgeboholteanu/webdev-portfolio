@@ -12,9 +12,9 @@ import DevImg from "./DevImg";
 
 function Hero() {
 	return (
-		<section className="py-24 xl:py-36 h-[84vh] xl:pt-48 bg-slate-200 dark:bg-transparent bg-cover bg-no-repeat bg-bottom dark:bg-none">
+		<section className="xl:py-36 h-[84vh] xl:pt-48 bg-slate-200 dark:bg-transparent bg-cover bg-no-repeat bg-bottom dark:bg-none">
 			<div className="container mx-auto">
-				<div className="flex justify-between gap-x-10">
+				<div className="flex justify-between  gap-x-10">
 					{/* hero description */}
 					<div className="flex max-w-[500px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
 						<div className="pb-4">
@@ -26,10 +26,10 @@ function Hero() {
 								<span className="text-cyan-600">George</span>
 							</h1>
 						</div>
+					
 						<p className="text-sm font-light italic pb-10 text-muted-foreground tracking-[1px] max-w-[500px]">
 							{" "}
-							Pursuing long-term self-improvement goals, I embrace
-							life{" "}
+							I embrace life{" "}
 							<span className="text-yellow-400">proactively</span>
 							,{" "}
 							<span className="text-yellow-400">
@@ -71,9 +71,7 @@ function Hero() {
 					</div>
 					{/* hero image */}
 					<div className="hidden xl:flex relative">
-						<div
-							className="bg-hero_shape_light dark:bg-hero_shape_dark w-[480px] h-[480x] bg-no-repeat absolute -top-1 -right-0"
-						>
+						<div className="bg-hero_shape_light dark:bg-hero_shape_dark w-[480px] h-[480x] bg-no-repeat absolute -top-1 -right-0">
 							<DevImg
 								containerStyles="bg-hero_shape w-[476px] h-[476px] bg-no-repeat bg-bottom relative"
 								imgSrc="/hero/gb_cutout.png"
