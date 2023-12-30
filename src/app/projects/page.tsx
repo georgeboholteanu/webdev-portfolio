@@ -25,7 +25,7 @@ interface Project {
 
 const projectData = [
 	{
-		image: "/projects/dreamquestapp.webp",
+		image: "/projects/dreamquest-app.webp",
 		name: "DreamQuest",
 		category: ["figma", "wordpress", "seo", "search console"],
 		description: "Web app for architectural visualization company",
@@ -34,7 +34,7 @@ const projectData = [
 		type: ["dev", "all"],
 	},
 	{
-		image: "/projects/fitnestapp.webp",
+		image: "/projects/fitnest-app.webp",
 		name: "Fitnest Club",
 		category: ["react", "tailwind", "sequalize", "mysql", "express"],
 		description:
@@ -44,7 +44,7 @@ const projectData = [
 		type: ["dev", "all"],
 	},
 	{
-		image: "/projects/freelancerapp.webp",
+		image: "/projects/freelancer-app.webp",
 		name: "Freelancer Booking",
 		category: ["react", "node", "tailwind", "express"],
 		description:
@@ -54,7 +54,7 @@ const projectData = [
 		type: ["dev", "all"],
 	},
 	{
-		image: "/projects/sam_original.webp",
+		image: "/projects/sam-app.webp",
 		name: "Smart Asset Manager",
 		category: ["python", "inno-setup", "web scraping", "tkinter"],
 		description:
@@ -64,7 +64,7 @@ const projectData = [
 		type: ["dev", "all"],
 	},
 	{
-		image: "/projects/triviaapp.png",
+		image: "/projects/trivia-app.png",
 		name: "Trivia Quizz",
 		category: ["react", "node", "tailwind", "express"],
 		description: "Interractive quizz app using Trivia and GIPHY APIs ",
