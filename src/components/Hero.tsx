@@ -26,7 +26,7 @@ function Hero() {
 								<span className="text-cyan-600">George</span>
 							</h1>
 						</div>
-					
+
 						<p className="text-sm font-light italic pb-10 text-muted-foreground tracking-[1px] max-w-[500px]">
 							{" "}
 							I embrace life{" "}
@@ -64,10 +64,7 @@ function Hero() {
 							</Link>
 						</div>
 						{/* socials */}
-						<Socials
-							containerStyles="flex gap-x-6 mx-auto xl:mx-0"
-							iconsStyles="text-foreground text-[36px] hover:text-primary transition-all"
-						/>
+						<Socials containerStyles="flex gap-x-6 mx-auto xl:mx-0" />
 					</div>
 					{/* hero image */}
 					<div className="hidden xl:flex relative">
