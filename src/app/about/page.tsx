@@ -16,7 +16,6 @@ const About = () => {
 	const [isHoveredE6, setIsHoveredE6] = useState(false);
 
 	const { theme, setTheme } = useTheme();
-	
 
 	return (
 		<PageWrapper>
@@ -187,13 +186,15 @@ const About = () => {
 								Sep 2022 - Dec 2023
 							</p>
 							<div className="justify-center sm:justify-start flex">
-								<Image
-									src="/about/profiletree.svg"
-									width={120}
-									height={20}
-									alt=""
-									className="pt-5"
-								/>
+								<Link href="https://profiletree.com">
+									<Image
+										src="/about/profiletree.svg"
+										width={120}
+										height={20}
+										alt=""
+										className="pt-5"
+									/>
+								</Link>
 							</div>
 						</div>
 
@@ -239,13 +240,15 @@ const About = () => {
 								Nov 2022 - Mar 2023
 							</p>
 							<div className="justify-center sm:justify-start flex">
-								<Image
-									src="/about/edx_logo.svg"
-									width={60}
-									height={20}
-									alt=""
-									className="pt-5"
-								/>
+								<Link href="https://edx.org">
+									<Image
+										src="/about/edx_logo.png"
+										width={60}
+										height={20}
+										alt=""
+										className="pt-5"
+									/>
+								</Link>
 							</div>
 						</div>
 
@@ -402,17 +405,19 @@ const About = () => {
 								Feb 2020 - Present
 							</p>
 							<div className="justify-center sm:justify-start flex">
-								<Image
-									src={
-										theme === "dark"
-											? "/about/dreamquest_white.png"
-											: "/about/dreamquest_black.png"
-									}
-									width={120}
-									height={20}
-									alt=""
-									className="pt-5"
-								/>
+								<Link href="https://dreamquestviz.com">
+									<Image
+										src={
+											theme === "dark"
+												? "/about/dreamquest_white.png"
+												: "/about/dreamquest_black.png"
+										}
+										width={120}
+										height={20}
+										alt=""
+										className="pt-5"
+									/>
+								</Link>
 							</div>
 						</div>
 						{/* Column 2 */}
@@ -545,7 +550,7 @@ const About = () => {
 							<div className="justify-center sm:justify-start flex">
 								<Link href="https://fosterandpartners.com">
 									<Image
-										src="/about/foster_and_partners.svg"
+										src="/about/foster_and_partners.png"
 										width={130}
 										height={20}
 										alt=""
