@@ -9,7 +9,7 @@ interface ProjectCardProps {
 	projectName: string,
 	projectCategory: string[],
 	projectDescription: string,
-	projectType: string,
+	projectType: string[],
 	projectLink: string,
 	projectGithub: string,
 }
