@@ -6,8 +6,8 @@ interface TextareaProps
 	className?: string;
 }
 
-const Textarea = React.forwardRef(
-	({ className, ...props }: TextareaProps, ref) => {
+const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
+	({ className, ...props }, ref) => {
 		return (
 			<textarea
 				className={cn(
