@@ -64,7 +64,7 @@ const projectData = [
 		type: ["dev", "all"],
 	},
 	{
-		image: "/projects/trivia-app.png",
+		image: "/projects/trivia-app.webp",
 		name: "Trivia Quizz",
 		category: ["react", "node", "tailwind", "express"],
 		description: "Interractive quizz app using Trivia and GIPHY APIs ",
