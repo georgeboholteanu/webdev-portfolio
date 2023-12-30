@@ -13,6 +13,16 @@ import ProjectCard from "@/components/ProjectCard";
 import PageWrapper from "@/components/PageWrapper";
 import { Badge } from "@/components/ui/badge";
 
+interface Project {
+	image: string;
+	name: string;
+	category: string[];
+	description: string;
+	link: string;
+	github: string;
+	type: string[];
+}
+
 const projectData = [
 	{
 		image: "/projects/dreamquestapp.jpg",
@@ -122,15 +132,13 @@ const projectData = [
 
 const Projects = () => {
 	const [activeCategory, setActiveCategory] = useState("all");
-	const [filteredProjects, setFilteredProjects] = useState([]);
+	const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
 
 	const handleCategoryChange = (category: string) => {
 		setActiveCategory(category);
 	};
 
 	useEffect(() => {
-		console.log(activeCategory);
-
 		const projectsToShow =
 			activeCategory === "all"
 				? projectData
@@ -139,9 +147,7 @@ const Projects = () => {
 				  );
 
 		setFilteredProjects(projectsToShow);
-
-		console.log(filteredProjects);
-	}, [filteredProjects, activeCategory]);
+	}, [activeCategory]);
 
 	return (
 		<PageWrapper>
