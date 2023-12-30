@@ -13,13 +13,18 @@ function Header() {
 	const [header, setHeader] = useState(false);
 
 	useEffect(() => {
-		const scrollYPos = window.addEventListener("scroll", () => {
-			window.scrollY > 50 ? setHeader(true) : setHeader(false);
-		});
+		const handleScroll = () => {
+			setHeader(window.scrollY > 50);
+		};
 
-		// remove event
-		return () => window.removeEventListener("scroll", scrollYPos);
-	});
+		// add event listener
+		window.addEventListener("scroll", handleScroll);
+
+		// remove event listener
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
 	return (
 		<header
