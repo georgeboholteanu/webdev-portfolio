@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 // components
-import ExperienceHeader from "@/components/ExperienceHeader";
+import ExperienceHeader from "@/components/about/ExperienceHeader";
 import PageWrapper from "@/components/PageWrapper";
 
 const About = () => {

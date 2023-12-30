@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import PageWrapper from "@/components/PageWrapper";
-import Form from "@/components/Form";
+import Form from "@/components/contact/Form";
 import { MailIcon, HomeIcon, PhoneCall } from "lucide-react";
 
 const Contact = () => {

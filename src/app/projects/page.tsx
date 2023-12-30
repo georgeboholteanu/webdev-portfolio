@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
 // components
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "@/components/projects/ProjectCard";
 import PageWrapper from "@/components/PageWrapper";
 import { Badge } from "@/components/ui/badge";
 
@@ -25,7 +25,7 @@ interface Project {
 
 const projectData = [
 	{
-		image: "/projects/dreamquestapp.jpg",
+		image: "/projects/dreamquestapp.webp",
 		name: "DreamQuest",
 		category: ["figma", "wordpress", "seo", "search console"],
 		description: "Web app for architectural visualization company",
@@ -34,7 +34,7 @@ const projectData = [
 		type: ["dev", "all"],
 	},
 	{
-		image: "/projects/fitnestapp.jpg",
+		image: "/projects/fitnestapp.webp",
 		name: "Fitnest Club",
 		category: ["react", "tailwind", "sequalize", "mysql", "express"],
 		description:
@@ -44,7 +44,7 @@ const projectData = [
 		type: ["dev", "all"],
 	},
 	{
-		image: "/projects/freelancerapp.png",
+		image: "/projects/freelancerapp.webp",
 		name: "Freelancer Booking",
 		category: ["react", "node", "tailwind", "express"],
 		description:
@@ -54,7 +54,7 @@ const projectData = [
 		type: ["dev", "all"],
 	},
 	{
-		image: "/projects/sam_original.jpg",
+		image: "/projects/sam_original.webp",
 		name: "Smart Asset Manager",
 		category: ["python", "inno-setup", "web scraping", "tkinter"],
 		description:
