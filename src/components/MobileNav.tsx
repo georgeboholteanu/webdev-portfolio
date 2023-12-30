@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
 
@@ -6,7 +5,6 @@ import { AlignJustify } from "lucide-react";
 import Nav from "./Nav";
 import Logo from "./Logo";
 import Socials from "./Socials";
-
 
 const MobileNav = () => {
 	return (
@@ -21,8 +19,12 @@ const MobileNav = () => {
 						<Nav
 							containerStyles="flex flex-col items-center gap-y-6 pt-20 pb-80"
 							linkStyles="text-2xl"
+							underlineStyles=""
 						/>
-						<Socials containerStyles="flex justify-center gap-x-4" iconsStyles="text-foreground text-[24px] hover:text-primary transition-all" />
+						<Socials
+							containerStyles="flex justify-center gap-x-4"
+							iconsStyles="text-foreground text-[24px] hover:text-primary transition-all"
+						/>
 					</div>
 				</div>
 			</SheetContent>

@@ -7,6 +7,12 @@ import { usePathname } from "next/navigation";
 //framer motion
 import { motion } from "framer-motion";
 
+interface NavProps {
+	containerStyles: string;
+	linkStyles: string;
+	underlineStyles: string;
+}
+
 const links = [
 	{ path: "/", name: "home" },
 	{ path: "/about", name: "about" },
@@ -14,7 +20,7 @@ const links = [
 	{ path: "/contact", name: "contact" },
 ];
 
-const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
+const Nav: React.FC<NavProps> = ({ containerStyles, linkStyles, underlineStyles }) => {
 	const path = usePathname();
 
 	return (

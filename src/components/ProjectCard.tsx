@@ -4,7 +4,17 @@ import { Card, CardHeader } from "./ui/card";
 import { Github, Link2Icon } from "lucide-react";
 import { Badge } from "./ui/badge";
 
-const ProjectCard = ({
+interface ProjectCardProps {
+	projectImage: string,
+	projectName: string,
+	projectCategory: string[],
+	projectDescription: string,
+	projectType: string,
+	projectLink: string,
+	projectGithub: string,
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
 	projectImage,
 	projectName,
 	projectCategory,

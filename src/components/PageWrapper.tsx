@@ -1,13 +1,18 @@
 "use client";
+import { ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const PageWrapper = ({ children }) => {
+interface PageWrapperProps {
+	children: ReactNode;
+}
+
+const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => {
 	return (
 		<AnimatePresence>
 			<motion.div
 				initial={{ opacity: 0, y: 15 }}
 				animate={{ opacity: 1, y: 0 }}
-				exist={{ opacity: 0, y: 15 }}
+				exit={{ opacity: 0, y: 15 }}
 				transition={{ delay: 0.25 }}
 			>
 				{children}

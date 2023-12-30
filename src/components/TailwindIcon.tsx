@@ -1,5 +1,8 @@
 
-const TailwindIcon = (props) => {
+interface TailwindIconProps {
+	props: string,
+}
+const TailwindIcon:React.FC<TailwindIconProps> = (props) => {
 	return (
 		<>
 			<svg
