@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 
 // import swiper
 import "swiper/css";
@@ -142,7 +141,7 @@ const Projects = () => {
 		setFilteredProjects(projectsToShow);
 
 		console.log(filteredProjects);
-	}, [activeCategory]);
+	}, [filteredProjects, activeCategory]);
 
 	return (
 		<PageWrapper>
