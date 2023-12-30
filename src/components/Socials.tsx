@@ -4,6 +4,7 @@ import { RiLinkedinFill, RiGithubFill, RiInstagramFill } from "react-icons/ri";
 interface SocialsProps {
 	containerStyles: string,	
 }
+
 const icons = [
 	{
 		path: "https://www.linkedin.com/in/george-boholteanu-638957267/",
