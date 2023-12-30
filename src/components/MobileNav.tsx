@@ -21,10 +21,7 @@ const MobileNav = () => {
 							linkStyles="text-2xl"
 							underlineStyles=""
 						/>
-						<Socials
-							containerStyles="flex justify-center gap-x-4"
-							iconsStyles="text-foreground text-[24px] hover:text-primary transition-all"
-						/>
+						<Socials containerStyles="flex justify-center gap-x-4" />
 					</div>
 				</div>
 			</SheetContent>
