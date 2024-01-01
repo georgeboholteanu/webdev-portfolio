@@ -25,6 +25,15 @@ interface Project {
 
 const projectData = [
 	{
+		image: "/projects/portfolio-app.webp",
+		name: "Web Dev Portfolio",
+		category: ["NextJS", "node", "tailwind", "framer motion"],
+		description: "Personal Portfolio for a Web Developer",
+		link: "https://webdev-portfolio-navy.vercel.app/",
+		github: "https://github.com/georgeboholteanu/webdev-portfolio",
+		type: ["dev", "all"],
+	},
+	{
 		image: "/projects/dreamquest-app.webp",
 		name: "DreamQuest",
 		category: ["figma", "wordpress", "seo", "search console"],
