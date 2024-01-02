@@ -10,6 +10,7 @@ import {
 	SiAdobephotoshop,
 	SiAdobeindesign,
 	SiAdobeillustrator,
+	SiTypescript,
 } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
 
@@ -22,6 +23,7 @@ const iconsFrameworks = [
 	{ name: <FaReact />, key: "react" },
 	{ name: <FaCss3Alt />, key: "css" },
 	{ name: <TailwindIcon />, key: "tailwind" },
+	{ name: <SiTypescript />, key: "typescript" },
 ];
 
 const iconsTools = [
