@@ -13,9 +13,9 @@ import DevImg from "./DevImg";
 
 function Hero() {
 	return (
-		<section className="xl:py-36 h-[84vh] xl:pt-48 bg-slate-200 dark:bg-transparent bg-cover bg-no-repeat bg-bottom dark:bg-none">
-			<div className="container mx-auto">
-				<div className="flex justify-between  gap-x-10">
+		<section className="md:py-36 h-[84vh] xl:pt-48 bg-slate-200 dark:bg-transparent bg-cover bg-no-repeat bg-bottom dark:bg-none">
+			<div className="container mx-auto justify-center">
+				<div className="grid grid-cols-1 sm:grid-cols-2 justify-between gap-x-10 gap-y-10">
 					{/* hero description */}
 					<div className="flex max-w-[500px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
 						<div className="pb-4">
@@ -26,7 +26,7 @@ function Hero() {
 								Hello, my name is{" "}
 								<span className="text-cyan-600">George</span>
 							</h1>
-						</div>
+						</div>			
 
 						<p className="text-sm font-light italic pb-10 text-muted-foreground tracking-[1px] max-w-[500px]">
 							{" "}
@@ -65,17 +65,17 @@ function Hero() {
 							</Link>
 						</div>
 						{/* socials */}
-						<Socials containerStyles="flex gap-x-6 mx-auto xl:mx-0" />
+						<Socials containerStyles="flex gap-x-6 mx-auto xl:mx-0 hidden sm:flex" />
 					</div>
 					{/* hero image */}
-					<div className="relative">
-						<div className="bg-hero_shape_light dark:bg-hero_shape_dark w-[480px] h-[480x] bg-no-repeat absolute -top-1 -right-0">
+					<div className="hidden relative md:flex">
+						<div className="bg-hero_shape_light dark:bg-hero_shape_dark w-[480px] h-[480x] sm:scale-75 lg:scale-100 bg-no-repeat absolute -top-1 -right-0">
 							<DevImg
 								containerStyles="bg-hero_shape w-[476px] h-[476px] bg-no-repeat bg-bottom relative"
 								imgSrc="/hero/gb_cutout2.png"
 							/>
 						</div>
-					</div>	
+					</div>
 				</div>
 			</div>
 		</section>
