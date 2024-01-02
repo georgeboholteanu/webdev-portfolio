@@ -69,14 +69,13 @@ function Hero() {
 					</div>
 					{/* hero image */}
 					<div className="relative">
-				
 						<div className="bg-hero_shape_light dark:bg-hero_shape_dark w-[480px] h-[480x] bg-no-repeat absolute -top-1 -right-0">
 							<DevImg
 								containerStyles="bg-hero_shape w-[476px] h-[476px] bg-no-repeat bg-bottom relative"
 								imgSrc="/hero/gb_cutout2.png"
 							/>
 						</div>
-					</div>
+					</div>	
 				</div>
 			</div>
 		</section>

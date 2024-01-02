@@ -1,9 +1,10 @@
-![nextjs](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![NEXTJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![REACT](https://img.shields.io/badge/REACT-lightblue?style=for-the-badge&logoColor=white)
+![TYPESCRIPT](https://shields.io/badge/TypeScript-3178C6?style=for-the-badge&logoColor=white)
 ![TAILWIND](https://img.shields.io/badge/TAILWIND-pink?style=for-the-badge&logoColor=white)
 [![VERCEL](https://img.shields.io/badge/VERCEL-black.svg?style=for-the-badge&logoColor=white)](https://webdev-portfolio-navy.vercel.app/)
 
-## Portfolio Developer App using NextJS
+## Portfolio Developer App using NextJS and Typescript
 
 First, run the development server:
 
