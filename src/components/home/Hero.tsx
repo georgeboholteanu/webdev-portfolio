@@ -69,9 +69,9 @@ function Hero() {
 					</div>
 					{/* hero image */}
 					<div className="hidden relative md:flex">
-						<div className="bg-hero_shape_light dark:bg-hero_shape_dark w-[480px] h-[480x] sm:scale-75 lg:scale-100 bg-no-repeat absolute -top-1 -right-0">
+						<div className="bg-hero_shape_light dark:bg-hero_shape_dark w-[500px] h-[500px] sm:scale-75 lg:scale-100 bg-no-repeat absolute -top-1 -right-0">
 							<DevImg
-								containerStyles="bg-hero_shape w-[476px] h-[476px] bg-no-repeat bg-bottom relative"
+								containerStyles="bg-hero_shape w-[494px] h-[489px] bg-no-repeat bg-bottom relative"
 								imgSrc="/hero/gb_cutout2.png"
 							/>
 						</div>
