@@ -31,16 +31,16 @@ function Hero() {
 						<p className="text-sm font-light italic pb-10 text-muted-foreground tracking-[1px] max-w-[500px]">
 							{" "}
 							I embrace life{" "}
-							<span className="text-yellow-400">proactively</span>
+							<span className="font-semibold text-yellow-500 dark:text-yellow-400">proactively</span>
 							,{" "}
-							<span className="text-yellow-400">
+							<span className="font-semibold text-yellow-500 dark:text-yellow-400">
 								learning from mistakes
 							</span>{" "}
 							and staying{" "}
-							<span className="text-yellow-400">curious</span>{" "}
+							<span className="font-semibold text-yellow-500 dark:text-yellow-400">curious</span>{" "}
 							about everything new. Committed to constant growth,
 							I approach challenges with resilience and a solid{" "}
-							<span className="text-yellow-400">commitment</span>{" "}
+							<span className="font-semibold text-yellow-500 dark:text-yellow-400">commitment</span>{" "}
 							to becoming a better version of myself.
 						</p>
 						{/* buttons */}
