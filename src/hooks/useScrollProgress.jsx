@@ -12,8 +12,7 @@ const useScrollProgress = () => {
 			if (scrollHeight) {
 				setCompletion(
 					Number(currentProgress / scrollHeight).toFixed(2) * 100
-				);
-				console.log(scrollHeight);
+				);				
 			}
 		};
 

@@ -8,7 +8,12 @@ import Nav from "./Nav";
 import ThemeToggler from "./ThemeToggler";
 import MobileNav from "./MobileNav";
 
-function Header() {
+interface HeaderProps {
+	header: boolean;
+	pathname: string;
+}
+
+const Header: React.FC<HeaderProps> = () => {
 	const pathname = usePathname();
 	const [header, setHeader] = useState(false);
 
@@ -58,6 +63,6 @@ function Header() {
 			</div>
 		</header>
 	);
-}
+};
 
 export default Header;

@@ -2,8 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+
 // components
+import ThemedImage from "@/components/ThemedImage";
 import ExperienceHeader from "@/components/about/ExperienceHeader";
 import PageWrapper from "@/components/PageWrapper";
 
@@ -25,10 +27,11 @@ const About = () => {
 					<div className="">
 						<Image
 							src="/about/london_poster.png"
-							alt=""
+							alt="london illustration"
 							width={600}
 							height={9}
 							className="rounded-xl"
+							priority
 						></Image>
 					</div>
 					<div className="justify-center">
@@ -187,12 +190,12 @@ const About = () => {
 							</p>
 							<div className="justify-center sm:justify-start flex">
 								<Link href="https://profiletree.com">
-									<Image
-										src="/about/profiletree.svg"
-										width={120}
-										height={20}
-										alt=""
-										className="pt-5"
+									<ThemedImage
+										imageName="profiletree"
+										imageAlt="profiletree"
+										imageStyles="pt-5"
+										imageWidth={120}
+										imageHeight={20}
 									/>
 								</Link>
 							</div>
@@ -241,12 +244,12 @@ const About = () => {
 							</p>
 							<div className="justify-center sm:justify-start flex">
 								<Link href="https://edx.org">
-									<Image
-										src="/about/edx_logo.png"
-										width={60}
-										height={20}
-										alt=""
-										className="pt-5"
+									<ThemedImage
+										imageName="edx"
+										imageAlt="edx"
+										imageStyles="pt-5"
+										imageWidth={80}
+										imageHeight={20}
 									/>
 								</Link>
 							</div>
@@ -314,12 +317,12 @@ const About = () => {
 								Mar 2020 - Present
 							</p>
 							<div className="justify-center sm:justify-start flex">
-								<Image
-									src="/about/illustration_personal_dev_cutout.png"
-									width={80}
-									height={20}
-									alt=""
-									className="pt-5"
+								<ThemedImage
+									imageName="personalDev"
+									imageAlt="personal development"
+									imageStyles="pt-5"
+									imageWidth={80}
+									imageHeight={20}
 								/>
 							</div>
 						</div>
@@ -406,16 +409,12 @@ const About = () => {
 							</p>
 							<div className="justify-center sm:justify-start flex">
 								<Link href="https://dreamquestviz.com">
-									<Image
-										src={
-											theme === "dark"
-												? "/about/dreamquest_white.png"
-												: "/about/dreamquest_black.png"
-										}
-										width={120}
-										height={20}
-										alt=""
-										className="pt-5"
+									<ThemedImage
+										imageName="artist"
+										imageStyles="pt-5"
+										imageAlt="3d artist"
+										imageWidth={80}
+										imageHeight={20}
 									/>
 								</Link>
 							</div>
@@ -470,16 +469,12 @@ const About = () => {
 							</p>
 							<div className="justify-center sm:justify-start flex">
 								<Link href="https://ahmm.co.uk">
-									<Image
-										src={
-											theme === "dark"
-												? "/about/ahmm_light.png"
-												: "/about/ahmm_dark.png"
-										}
-										width={80}
-										height={20}
-										alt=""
-										className="pt-5"
+									<ThemedImage
+										imageName="ahmm"
+										imageAlt="ahmm"
+										imageStyles="pt-5"
+										imageWidth={80}
+										imageHeight={20}
 									/>
 								</Link>
 							</div>
@@ -549,12 +544,12 @@ const About = () => {
 							</p>
 							<div className="justify-center sm:justify-start flex">
 								<Link href="https://fosterandpartners.com">
-									<Image
-										src="/about/foster_and_partners.png"
-										width={130}
-										height={20}
-										alt=""
-										className="pt-5"
+									<ThemedImage
+										imageName="foster"
+										imageAlt="fosterandpartners"
+										imageStyles="pt-5"
+										imageWidth={120}
+										imageHeight={10}
 									/>
 								</Link>
 							</div>
