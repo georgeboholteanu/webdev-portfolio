@@ -1,6 +1,5 @@
 "use server";
 import { Resend } from "resend";
-import { EmailTemplate } from "@/components/contact/email-template";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -20,7 +19,7 @@ export const sendEmail = async ({ formData }) => {
 
 	await resend.emails.send({
 		from: "onboarding@resend.dev",
-		to: formData.email,
+		to: [formData.email as string],
 		subject: "Greetings from George",
 		text: sendEmailContent,
 	});

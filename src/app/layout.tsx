@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
+import { ToastContainer } from 'react-toastify';
 
 // components
 import Header from '@/components/Header';
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className={`${poppins.className}`}>
         <ThemeProvider attribute="class" defaultTheme='dark'>
           <Header />
+          <ToastContainer />
           {children}        
           <Footer />
         </ThemeProvider>

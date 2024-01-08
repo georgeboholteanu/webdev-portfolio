@@ -29,8 +29,7 @@
 		".next/types/**/*.ts",
 		"src/hooks/useScrollProgress.jsx",
 		"src/components/ThemeProvider.jsx",
-		"src/app/api/sendEmail/route.ts",
-		
+		"src/app/api/emails/receiveEmail.ts"
 	],
 	"exclude": ["node_modules"]
 }

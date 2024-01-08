@@ -5,6 +5,8 @@ import { Textarea } from "../ui/textarea";
 import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
 import { receiveEmail, sendEmail } from "@/app/api/sendEmail/route";
 import React, { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Form = () => {
 	const [formData, setFormData] = useState({
@@ -17,20 +19,34 @@ const Form = () => {
 		setFormData({ ...formData, [e.target.id]: e.target.value });
 	};
 
-	const handleSendEmail = async (e: any) => {
-		e.preventDefault();
-
+	const handleSendEmail = async () => {
 		try {
-			await receiveEmail({ formData });
 			await sendEmail({ formData });
-			console.log("Emails sent successfully!");
+			console.log("sendEmail sent successfully!");
 		} catch (error) {
-			console.error("Error sending emails:", error);
+			console.error("Error sending sendEmail:", error);
 		}
 	};
 
+	const handleReceiveEmail = async () => {
+		try {
+			await receiveEmail({ formData });
+			toast.success("Email sent successfully!");
+			console.log("receiveEmail sent successfully!");
+		} catch (error) {
+			console.error("Error sending receiveEmail:", error);
+			toast.error("Error sending email!");
+		}
+	};
+
+	const handleSubmit = (e: any) => {
+		e.preventDefault();
+		handleSendEmail();
+		handleReceiveEmail();
+	};
+
 	return (
-		<form className="flex flex-col gap-y-4" onSubmit={handleSendEmail}>
+		<form className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
 			{/* input */}
 			<div className="relative flex items-center">
 				<Input

@@ -9,8 +9,8 @@ import ThemeToggler from "./ThemeToggler";
 import MobileNav from "./MobileNav";
 
 interface HeaderProps {
-	header: boolean;
-	pathname: string;
+	header?: boolean;
+	pathname?: string;
 }
 
 const Header: React.FC<HeaderProps> = () => {
