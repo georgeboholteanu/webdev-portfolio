@@ -1,9 +1,9 @@
 "use client";
+import { receiveEmail, sendEmail } from "@/app/api/sendEmail/route";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
-import { receiveEmail, sendEmail } from "@/app/api/sendEmail/route";
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,30 +19,22 @@ const Form = () => {
 		setFormData({ ...formData, [e.target.id]: e.target.value });
 	};
 
-	const handleSendEmail = async () => {
-		try {
-			await sendEmail({ formData });
-			console.log("sendEmail sent successfully!");
-		} catch (error) {
-			console.error("Error sending sendEmail:", error);
-		}
-	};
-
-	const handleReceiveEmail = async () => {
-		try {
-			await receiveEmail({ formData });
-			toast.success("Email sent successfully!");
-			console.log("receiveEmail sent successfully!");
-		} catch (error) {
-			console.error("Error sending receiveEmail:", error);
-			toast.error("Error sending email!");
-		}
-	};
-
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		handleSendEmail();
-		handleReceiveEmail();
+
+		try {
+			// Execute both functions in parallel
+			await Promise.all([
+				sendEmail({ formData }),
+				receiveEmail({ formData }),
+			]);
+
+			toast.success("Email sent successfully!");
+			console.log("Both emails sent successfully!");
+		} catch (error) {
+			console.error("Error sending emails:", error);
+			toast.error("Error sending emails!");
+		}
 	};
 
 	return (
