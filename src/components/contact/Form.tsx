@@ -1,5 +1,4 @@
 "use client";
-import { receiveEmail, sendEmail } from "@/app/api/sendEmail/route";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
@@ -23,14 +22,26 @@ const Form = () => {
 		e.preventDefault();
 
 		try {
-			// Execute both functions in parallel
-			await Promise.all([
-				sendEmail({ formData }),
-				receiveEmail({ formData }),
-			]);
+			const response = await fetch("/api/sendEmail", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formData),
+			});
 
-			toast.success("Email sent successfully!");
-			console.log("Both emails sent successfully!");
+			if (response.ok) {
+				toast.success("Email sent successfully!");
+				console.log("Both emails sent successfully!");
+			} else {
+				// Handle error cases if needed
+				console.error(
+					"Error sending emails. Server returned:",
+					response.status,
+					response.statusText
+				);
+				toast.error("Error sending emails!");
+			}
 		} catch (error) {
 			console.error("Error sending emails:", error);
 			toast.error("Error sending emails!");
