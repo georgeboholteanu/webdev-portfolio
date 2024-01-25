@@ -60,47 +60,42 @@ const ThemedImage: React.FC<ThemedImageProps> = ({
 
 	if (isLoading) {
 		// Return loading state or fallback UI
-		return <p>Loading...</p>;
+		return "Loading...";
 	}
 
-	// Ensure the image name exists in the mappings
+	const isThemedImageMapping = (
+		obj: any
+	): obj is { dark: string; light: string } => {
+		return typeof obj === "object" && "dark" in obj && "light" in obj;
+	};
+
 	if (!imageMappings[imageName]) {
 		console.error(`Image name "${imageName}" not found in mappings.`);
-		return null; 
-	}
-
-	// Ensure the resolved theme is valid
-	if (
-		resolvedTheme !== undefined &&
-		!imageMappings[imageName][resolvedTheme]
-	) {
-		console.error(
-			`Image source not found for theme "${resolvedTheme}" and image "${imageName}".`
-		);
-		return null; 
+		return null;
 	}
 
 	const imageSrc =
 		resolvedTheme !== undefined
-			? imageMappings[imageName][resolvedTheme]
-			: undefined;
+			? isThemedImageMapping(imageMappings[imageName])
+			: imageMappings[imageName].dark ||
+			  imageMappings[imageName].light ||
+			  "";
 
 	if (!imageSrc) {
 		console.error(
 			`Image source not found for theme "${resolvedTheme}" and image "${imageName}".`
 		);
-		return null; 
+		return null;
 	}
 
 	return (
 		<Image
-			src={imageSrc}
+			src={imageSrc as string}
 			alt={imageAlt}
 			className={imageStyles}
 			width={imageWidth}
 			height={imageHeight}
 			priority
-					
 		/>
 	);
 };
