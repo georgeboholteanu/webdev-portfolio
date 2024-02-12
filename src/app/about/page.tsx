@@ -17,8 +17,6 @@ const About = () => {
 	const [isHoveredE5, setIsHoveredE5] = useState(false);
 	const [isHoveredE6, setIsHoveredE6] = useState(false);
 
-	const { theme, setTheme } = useTheme();
-
 	return (
 		<PageWrapper>
 			<div className="container mx-auto pb-10 sm:pt-10">
@@ -78,10 +76,27 @@ const About = () => {
 							<div className="flex flex-col gap-4">
 								<div className="flex">
 									<div className="flex flex-col">
-										<a href="https://skillsbootcamp.credential.getsmarter.com/c21c99b3-10a6-417e-802e-54436f3af2d6"></a>
-										<h5 className="text-yellow-400 hover:scale-110 transition-all w-[120px] sm:w-[250px]">
-											EDX Bootcamp
-										</h5>
+										<a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">
+											<h5 className="text-yellow-400 hover:scale-105 transition-all w-[120px] sm:w-[250px]">
+												UDEMY
+											</h5>
+										</a>
+
+										<span className="text-sm">
+											Sep 2023
+										</span>
+									</div>
+									<p className="text-sm font-sans">
+										The Complete Web Development Bootcampt
+									</p>
+								</div>
+								<div className="flex">
+									<div className="flex flex-col">
+										<a href="https://skillsbootcamp.credential.getsmarter.com/c21c99b3-10a6-417e-802e-54436f3af2d6">
+											<h5 className="text-yellow-400 hover:scale-105 transition-all w-[120px] sm:w-[250px]">
+												EDX Bootcamp
+											</h5>
+										</a>
 
 										<span className="text-sm">
 											Mar 2023
@@ -93,7 +108,7 @@ const About = () => {
 								</div>
 								<div className="flex">
 									<div className="flex flex-col">
-										<h5 className="text-yellow-400 hover:scale-110 transition-all w-[120px] sm:w-[250px]">
+										<h5 className="text-yellow-400 hover:scale-105 transition-all w-[120px] sm:w-[250px]">
 											<a href="https://www.sololearn.com/en/certificates/CT-YQGGZDYQ">
 												SOLOLEARN
 											</a>
@@ -108,7 +123,7 @@ const About = () => {
 								</div>
 								<div className="flex">
 									<div className="flex flex-col">
-										<h5 className="text-yellow-400 hover:scale-110 transition-all w-[120px] sm:w-[250px]">
+										<h5 className="text-yellow-400 hover:scale-105 transition-all w-[120px] sm:w-[250px]">
 											<a href="https://www.sololearn.com/en/certificates/CT-YQGGZDYQ">
 												SOLOLEARN
 											</a>
@@ -123,7 +138,7 @@ const About = () => {
 								</div>
 								<div className="flex">
 									<div className="flex flex-col">
-										<h5 className="text-yellow-400 hover:scale-110 transition-all w-[120px] sm:w-[250px]">
+										<h5 className="text-yellow-400 hover:scale-105 transition-all w-[120px] sm:w-[250px]">
 											<a href="https://www.sololearn.com/en/certificates/CT-1VRJILRM"></a>
 											SOLOLEARN
 										</h5>
@@ -137,7 +152,7 @@ const About = () => {
 								</div>
 								<div className="flex">
 									<div className="flex flex-col">
-										<h5 className="text-yellow-400 hover:scale-110 transition-all w-[120px] sm:w-[250px]">
+										<h5 className="text-yellow-400 hover:scale-105 transition-all w-[120px] sm:w-[250px]">
 											<a href="https://www.sololearn.com/en/certificates/CT-1VRJILRM"></a>
 											University of Architecture Bucharest
 											RO
@@ -184,7 +199,7 @@ const About = () => {
 					<div className="grid grid-cols-1 sm:grid-cols-5 gap-1">
 						{/* Column 1 */}
 						<div className="flex flex-col py-4 text-center sm:text-left ">
-							<h3 className="text-xl">Web Developer</h3>
+							<h3 className="text-xl">Web Developer Intern</h3>
 							<p className="text-xs text-text-orange-700 dark:text-orange-200/70">
 								Sep 2022 - Dec 2023
 							</p>
@@ -238,7 +253,7 @@ const About = () => {
 					<div className="grid grid-cols-1 sm:grid-cols-5 gap-1">
 						{/* Column 1 */}
 						<div className="flex flex-col py-4 text-center sm:text-left">
-							<h3 className="text-xl">Front End Developer</h3>
+							<h3 className="text-xl">Front End Developer Bootcamp</h3>
 							<p className="text-xs text-text-orange-700 dark:text-orange-200/70">
 								Nov 2022 - Mar 2023
 							</p>
@@ -270,7 +285,7 @@ const About = () => {
 										utilizing Agile methodologies
 									</li>
 									<li className="text-sm font-sans text-black dark:text-white">
-										Proficient in HTML, CSS, Tailwind,
+										Good understanding of HTML, CSS, Tailwind,
 										JavaScript, React and Node.js
 									</li>
 									<li className="text-sm font-sans text-black dark:text-white">
@@ -308,11 +323,11 @@ const About = () => {
 						<div className="w-full border border-solid border-gray-200 dark:border-gray-700 rounded-lg hidden sm:flex"></div>
 					</div>
 
-					{/* GRID 3 - Software Developer*/}
+					{/* GRID 3 - Personal Projects*/}
 					<div className="grid grid-cols-1 sm:grid-cols-5 gap-1">
 						{/* Column 1 */}
 						<div className="flex flex-col py-4 text-center sm:text-left">
-							<h3 className="text-xl">Software Developer</h3>
+							<h3 className="text-xl">Personal Projects</h3>
 							<p className="text-xs text-text-orange-700 dark:text-orange-200/70">
 								Mar 2020 - Present
 							</p>
@@ -339,6 +354,18 @@ const About = () => {
 						>
 							<div className="m-4">
 								<ul className="flex flex-col gap-2">
+									<li className="text-sm font-sans text-black dark:text-white">
+										Familiarized with NextJs, Prisma,
+										Docker, Typescript, CRUD, PostgreSQL
+										while creating a{" "}
+										<a
+											href="https://github.com/georgeboholteanu/food-ordering"
+											className="text-yellow-400 font-semibold"
+										>
+											Restaurant
+										</a>{" "}
+										Reservations and Food Ordering app
+									</li>
 									<li className="text-sm font-sans text-black dark:text-white">
 										Created a{" "}
 										<a
