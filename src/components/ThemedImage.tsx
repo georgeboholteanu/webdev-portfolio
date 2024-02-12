@@ -20,8 +20,8 @@ const imageMappings = {
     light: "/about/ahmm_light.png",
   },
   foster: {
-    dark: "/about/foster_and_partners.svg",
-    light: "/about/foster_and_partners.svg",
+    dark: "/about/foster_and_partners.png",
+    light: "/about/foster_and_partners.png",
   },
   dreamquest: {
     dark: "/about/dreamquest_dark.png",
