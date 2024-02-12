@@ -28,8 +28,8 @@ const imageMappings = {
     light: "/about/dreamquest_light.png",
   },
   edx: {
-    dark: "/about/edx_logo.svg",
-    light: "/about/edx_logo.svg",
+    dark: "/about/edx_logo.png",
+    light: "/about/edx_logo.png",
   },
   personalDev: {
     dark: "/about/illustration_personal_dev_cutout.png",
