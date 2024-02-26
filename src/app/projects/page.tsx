@@ -25,10 +25,19 @@ interface Project {
 
 const projectData = [
 	{
+		image: "/projects/cucina_autentica-app.webp",
+		name: "Cucina Autentica",
+		category: ["NextJS", "TypeScript", "Prisma", "tailwind", "PostgreSQL", "Lunacy"],
+		description: "Restaurant food ordering app",
+		link: "https://food-ordering-ten.vercel.app/",
+		github: "https://github.com/georgeboholteanu/food-ordering",
+		type: ["dev", "all"],
+	},
+	{
 		image: "/projects/portfolio-app.webp",
 		name: "Web Dev Portfolio",
 		category: ["NextJS", "node", "tailwind", "framer motion"],
-		description: "Personal Portfolio for a Web Developer",
+		description: "Personal Portfolio for a Software Engineer",
 		link: "https://webdev-portfolio-navy.vercel.app/",
 		github: "https://github.com/georgeboholteanu/webdev-portfolio",
 		type: ["dev", "all"],
