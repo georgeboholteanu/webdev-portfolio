@@ -18,8 +18,24 @@ const Form = () => {
 		setFormData({ ...formData, [e.target.id]: e.target.value });
 	};
 
+	const isValidEmail = (email: string) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    };
+
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+
+		// Check if all fields are not empty
+		if (!formData.name || !formData.email || !formData.message) {
+			toast.error("Please fill in all fields.");
+			return;
+		}
+		
+		if (!isValidEmail(formData.email)) {
+            toast.error("Please enter a valid email address.");
+            return;
+        }
 
 		try {
 			const response = await fetch("/api/sendEmail", {
@@ -32,9 +48,8 @@ const Form = () => {
 
 			if (response.ok) {
 				toast.success("Email sent successfully!");
-				console.log("Both emails sent successfully!");
+				console.log("Email sent successfully!");
 			} else {
-				// Handle error cases if needed
 				console.error(
 					"Error sending emails. Server returned:",
 					response.status,
