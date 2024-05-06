@@ -36,7 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
 	return (
 		<Card className=" bg-gray-200 dark:bg-transparent group">
-			<CardHeader className="p-0 border-zinc-600 border-[1px] ">
+			<CardHeader className="p-0 border-b-zinc-600 border-[1px] ">
 				{/* image */}
 				<div className="relative w-full h-[200px] flex items-center justify-center bg-secondary dark:bg-gray-200/40 rounded-t-md overflow-hidden">
 					<Image
