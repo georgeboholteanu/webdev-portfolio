@@ -20,6 +20,11 @@ interface Project {
 	description: string;
 	link: string;
 	github: string;
+	extras?: {
+		featured: boolean;
+		year: string;
+		technology: string;
+	};
 	type: string[];
 }
 
@@ -27,10 +32,21 @@ const projectData = [
 	{
 		image: "/projects/cucina_autentica-app.webp",
 		name: "Cucina Autentica",
-		category: ["NextJS", "TypeScript", "Prisma", "tailwind", "PostgreSQL", "Lunacy"],
-		description: "Restaurant food ordering app",
+		category: [
+			"NextJS",
+			"Typescript",
+			"Clerk",
+			"Tailwind",
+			"PostgreSql",
+		],
+		description: "Restaurant food ordering and management app",
 		link: "https://food-ordering-ten.vercel.app/",
 		github: "https://github.com/georgeboholteanu/food-ordering",
+		extras: {
+			featured: true,
+			year: "2024",
+			technology: "FullStack",
+		},
 		type: ["dev", "all"],
 	},
 	{
@@ -40,6 +56,11 @@ const projectData = [
 		description: "Personal Portfolio for a Software Engineer",
 		link: "https://webdev-portfolio-navy.vercel.app/",
 		github: "https://github.com/georgeboholteanu/webdev-portfolio",
+		extras: {
+			featured: true,
+			year: "2024",
+			technology: "Frontend",
+		},
 		type: ["dev", "all"],
 	},
 	{
@@ -49,6 +70,11 @@ const projectData = [
 		description: "Web app for architectural visualization company",
 		link: "https://dreamquestviz.com/",
 		github: "/",
+		extras: {
+			featured: false,
+			year: "2023",
+			technology: "Frontend",
+		},
 		type: ["dev", "all"],
 	},
 	{
@@ -59,6 +85,11 @@ const projectData = [
 			"Full stack development app; user can register and login to access the Dashboard",
 		link: "https://fitnest.vercel.app/",
 		github: "https://github.com/georgeboholteanu/FITNEST-APP",
+		extras: {
+			featured: false,
+			year: "2023",
+			technology: "FullStack",
+		},
 		type: ["dev", "all"],
 	},
 	{
@@ -66,9 +97,14 @@ const projectData = [
 		name: "Freelancer Booking",
 		category: ["react", "node", "tailwind", "express"],
 		description:
-			"Users can easily browse and filter through a diverse range of freelancers by location, skills and work type",
+			"Browsing and filter through a diverse range of freelancers by location, skills and work type",
 		link: "https://freelancer-booking-app.onrender.com/",
 		github: "https://github.com/georgeboholteanu/Freelance-Booking-App",
+		extras: {
+			featured: false,
+			year: "2022",
+			technology: "FullStack",
+		},
 		type: ["dev", "all"],
 	},
 	{
@@ -76,9 +112,14 @@ const projectData = [
 		name: "Smart Asset Manager",
 		category: ["python", "inno-setup", "web scraping", "tkinter"],
 		description:
-			"Standalone app embedded into an installer; used for batch downloading data from a specific platform and to organize it",
+			"Standalone app embedded into an installer; batch downloading and organising data",
 		link: "https://github.com/georgeboholteanu/SmartAssetsManager",
 		github: "https://github.com/georgeboholteanu/SmartAssetsManager",
+		extras: {
+			featured: false,
+			year: "2022",
+			technology: "Backend",
+		},
 		type: ["dev", "all"],
 	},
 	{
@@ -88,6 +129,11 @@ const projectData = [
 		description: "Interractive quizz app using Trivia and GIPHY APIs ",
 		link: "https://andzej-s.github.io/trivia-quiz-game/",
 		github: "https://github.com/georgeboholteanu/TRIVIA-APP",
+		extras: {
+			featured: false,
+			year: "2022",
+			technology: "Frontend",
+		},
 		type: ["dev", "all"],
 	},
 	{
@@ -98,6 +144,11 @@ const projectData = [
 			"Offices and laboratory building oposite to Kings Cross, London",
 		link: "/projects/image001.webp",
 		github: "/",
+		extras: {
+			featured: false,
+			year: "2021",
+			technology: "Visualization",
+		},
 		type: ["vis", "all"],
 	},
 	{
@@ -107,6 +158,11 @@ const projectData = [
 		description: "Offices refurbishment next to Heathrow Airport",
 		link: "/projects/image002.webp",
 		github: "/",
+		extras: {
+			featured: false,
+			year: "2022",
+			technology: "Visualization",
+		},
 		type: ["vis", "all"],
 	},
 	{
@@ -116,6 +172,11 @@ const projectData = [
 		description: "Exquisite restaurant located Oklahoma USA",
 		link: "/projects/image005.webp",
 		github: "/",
+		extras: {
+			featured: false,
+			year: "2021",
+			technology: "Visualization",
+		},
 		type: ["vis", "all"],
 	},
 	{
@@ -125,6 +186,11 @@ const projectData = [
 		description: "Bedroom interior in Qingdao Residential Tower",
 		link: "/projects/image006.webp",
 		github: "/",
+		extras: {
+			featured: false,
+			year: "2020",
+			technology: "Visualization",
+		},
 		type: ["vis", "all"],
 	},
 	{
@@ -134,6 +200,11 @@ const projectData = [
 		description: "Top level Club Room next to Piccadilly Circus, London",
 		link: "/projects/image007.webp",
 		github: "/",
+		extras: {
+			featured: false,
+			year: "2022",
+			technology: "Visualization",
+		},
 		type: ["vis", "all"],
 	},
 	{
@@ -144,6 +215,11 @@ const projectData = [
 			"Typical floor Interior CGI looking to Berkley Square, London",
 		link: "/projects/image004.webp",
 		github: "/",
+		extras: {
+			featured: false,
+			year: "2022",
+			technology: "Visualization",
+		},
 		type: ["vis", "all"],
 	},
 ];
@@ -209,6 +285,7 @@ const Projects = () => {
 									projectType={project.type}
 									projectLink={project.link}
 									projectGithub={project.github}
+									projectExtras={project.extras}
 									key={index}
 								/>
 							);

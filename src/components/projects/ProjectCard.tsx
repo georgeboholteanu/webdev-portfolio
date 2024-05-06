@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardHeader } from "../ui/card";
-import { Github, Link2Icon } from "lucide-react";
-import { Badge } from "../ui/badge";
+import { Github, Link2Icon, Star } from "lucide-react";
+import { Badge, badgeVariants } from "../ui/badge";
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 interface ProjectCardProps {
 	projectImage: string;
@@ -12,6 +14,11 @@ interface ProjectCardProps {
 	projectType: string[];
 	projectLink: string;
 	projectGithub: string;
+	projectExtras?: {
+		featured: boolean;
+		year: string;
+		technology: string;
+	};
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -22,10 +29,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	projectType,
 	projectLink,
 	projectGithub,
+	projectExtras,
 }) => {
+	const { theme, setTheme } = useTheme();
+	useEffect(() => {}, [theme]);
+
 	return (
 		<Card className=" bg-gray-200 dark:bg-transparent group">
-			<CardHeader className="p-0">
+			<CardHeader className="p-0 border-zinc-600 border-[1px] ">
 				{/* image */}
 				<div className="relative w-full h-[200px] flex items-center justify-center bg-secondary dark:bg-gray-200/40 rounded-t-md overflow-hidden">
 					<Image
@@ -60,20 +71,40 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 					</div>
 				</div>
 			</CardHeader>
-			<div className="h-full px-4 py-6 text-center">
-				{projectCategory.map((category, index) => (
-					<Badge
-						key={index}
-						className="uppercase text-sm font-medium mb-2 mx-1"
+			<div className="h-full px-4 py-3 text-center">
+				<div className="h-52">
+					<h4 className="my-2 text-2xl ">{projectName}</h4>
+					<p className="text-muted-foreground text-sm px-6 py-2">
+						{projectDescription}
+					</p>
+					{projectCategory.map((category, index) => (
+						<Badge
+							key={index}
+							className={`${badgeVariants({
+								variant: "default",
+							})} uppercase text-xs my-2 mx-1`}
+						>
+							{category}
+						</Badge>
+					))}
+				</div>
+				{projectExtras && (
+					<div
+						className={`{${theme} === "dark" ? text-white: text-black} ${
+							projectExtras.featured
+								? "justify-between"
+								: "justify-center"
+						} text-xs font-semibold rounded-md bg-gradient-to-r from from-purple-400/30 to-blue-400/30  items-center flex my-2 p-2`}
 					>
-						{category}
-					</Badge>
-				))}
-
-				<h4 className="my-2 text-xl">{projectName}</h4>
-				<p className="text-muted-foreground text-sm px-6">
-					{projectDescription}
-				</p>
+						{projectExtras.featured && (
+							<Star fill="#73BBF7" strokeWidth={0} />
+						)}
+						<span className="h-6 flex items-center">{projectExtras.technology}</span>
+						{projectExtras.featured && (
+							<Star fill="#73BBF7" strokeWidth={0} />
+						)}
+					</div>
+				)}
 			</div>
 		</Card>
 	);
